@@ -1,5 +1,7 @@
 # Barstool Full-Stack Challenge (React App)
 
+[NodeJS Server for the challenge](https://github.com/mnichols17/barstool-server)
+
 ## Using
 
 - React w/ Hooks (Typescript)
