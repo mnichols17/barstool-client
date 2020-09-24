@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreboard {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+  max-width: 715px;
+}
+
+.scoreboard-top, .scoreboard-btm {
+  width: 100%;
+}
+
+/* TOP */
+
+table {
+  width: 100%;
+}
+
+table, td {
+  border: 1px solid #E0E0E0;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+  padding: 4px;
+  background-color: #EFEFEE;
+  font-size: .8em;
+}
+
+table, tbody tr:last-of-type td {
+  border-bottom: none;
+}
+
+.MLB .table-total { 
+  width: 20px;
+}
+
+.table-score {
+  border-right: none;
+  border-left: none;
+}
+
+tbody td {
+  border-bottom: none;
+  border-top: none;
+}
+
+.table-total {
+  border-right: none;
+}
+
+.table-total ~ .table-total {
+  border-left: none;
+}
+
+.table-label, .table-total {
+  font-weight: 500;
+}
+
+.table-score {
+  background-color: white;
+}
+
+/* BOTTOM */
+
+.scoreboard-btm {
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  grid-template-rows: 50px;
+  background: #EFEFEE;
+}
+
+.scoreboard-btm > * {
+  display: inline-grid;
+  place-items: center;
+  margin: 0;
+}
+
+.scoreboard-btm h3 {
+  background-color: #2C4D82;
+  color: white;
+  font-size: 1.1em;
+}
+
+.scoreboard-btm h6 {
+  border-top: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: .55em;
+}
+
+/* LOADING */
+
+.loader {
+  margin-top: 4em;
+  border: 10px solid #EFEFEE;
+  border-top: 10px solid #2C4D82;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin .8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* WIDTH SPECIFIC */
+
+@media screen and (max-width: 370px) {
+  .MLB .table-total { 
+    width: 12px;
+  }
+
+  .scoreboard-btm h3 {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  td {
+    text-align: center;
+    padding: 5px;
+    background-color: #EFEFEE;
+    font-size: 1em;
+  }
+
+  .MLB .table-total { 
+    width: 30px;
+  }
+
+  .scoreboard-btm {
+    grid-template-rows: 60px;
+  }
+
+  .scoreboard-btm h3 {
+    font-size: 1.5em;
+  }
+
+  .scoreboard-btm h6 {
+    font-size: .85em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  td {
+    text-align: center;
+    padding: 5px;
+    background-color: #EFEFEE;
+    font-size: 1em;
+  }
+
+  .scoreboard-btm {
+    grid-template-rows: 65px;
+  }
+
+  .scoreboard-btm h3 {
+    font-size: 2em;
+  }
+
+  .scoreboard-btm h6 {
+    font-size: .9em;
+  }
+}
